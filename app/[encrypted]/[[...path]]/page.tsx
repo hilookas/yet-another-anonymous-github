@@ -429,14 +429,26 @@ export default function ViewPage({ params }: ViewPageProps) {
         <div className="grid grid-cols-4 gap-8">
           {/* Left sidebar - File tree */}
           <div className="col-span-1">
-            <div className="bg-white rounded-lg shadow-md sticky top-8">
-              <FileTree
-                fileTree={fileTree}
-                expandedDirs={expandedDirs}
-                currentPath={currentPath}
-                onFileClick={handleFileClick}
-                onToggleDirectory={toggleDirectory}
-              />
+            <div className="sticky top-8">
+              <div className="bg-white rounded-lg shadow-md">
+                <FileTree
+                  fileTree={fileTree}
+                  expandedDirs={expandedDirs}
+                  currentPath={currentPath}
+                  onFileClick={handleFileClick}
+                  onToggleDirectory={toggleDirectory}
+                />
+              </div>
+
+              <div className="mt-4">
+                <a 
+                  href="/" 
+                  className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 bg-white rounded-lg px-3 py-2 shadow-sm hover:shadow-md"
+                >
+                  <span className="text-xl mr-2">✏️</span>
+                  <span className="font-medium">Create New Link</span>
+                </a>
+              </div>
             </div>
           </div>
           

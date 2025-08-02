@@ -88,7 +88,7 @@ export default function Home() {
             Yet Another Anonymous GitHub
           </h1>
           <p className="text-lg text-gray-600">
-            Create anonymous GitHub file links with automatic sensitive information replacement
+            Create anonymous GitHub links with terms replacement
           </p>
         </div>
 
@@ -211,34 +211,6 @@ export default function Home() {
             </div>
           </div>
         )}
-
-        <div className="bg-white rounded-lg shadow-md p-6 mt-8">
-          <h3 className="text-xl font-semibold mb-4 mt-0">Usage Instructions</h3>
-          <div className="space-y-4 text-gray-700">
-            <div>
-              <h4 className="font-medium">1. Configure Information</h4>
-              <p>Fill in the GitHub repository name, branch, and terms to anonymize.</p>
-            </div>
-            <div>
-              <h4 className="font-medium">2. Generate Link</h4>
-              <p>Click "Generate Anonymous Link" to create an encrypted URL.</p>
-            </div>
-            <div>
-              <h4 className="font-medium">3. Access Files</h4>
-              <p>Use the generated link to access files in the format:</p>
-              <code className="block bg-gray-100 p-2 rounded mt-2 text-sm">
-                [domain]/[encrypted-config]/[file-path]
-              </code>
-            </div>
-            <div>
-              <h4 className="font-medium">4. Example</h4>
-              <p>Access <code className="bg-gray-100 px-1 rounded">utils.py</code> file:</p>
-              <code className="block bg-gray-100 p-2 rounded mt-2 text-sm">
-                [domain]/[encrypted-config]/trimesh_URDF/utils.py
-              </code>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
