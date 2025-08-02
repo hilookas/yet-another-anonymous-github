@@ -1,0 +1,19 @@
+name = "yet-another-anonymous-github"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+[env.production]
+vars = { CRYPTO_SECRET_KEY = "your-production-secret-key-change-this" }
+
+[env.staging]
+vars = { CRYPTO_SECRET_KEY = "your-staging-secret-key" }
+
+[[env.production.kv_namespaces]]
+binding = "CACHE"
+id = "your-kv-namespace-id"
+preview_id = "your-preview-kv-namespace-id"
+
+[[env.staging.kv_namespaces]]
+binding = "CACHE"
+id = "your-staging-kv-namespace-id"
+preview_id = "your-staging-preview-kv-namespace-id" 

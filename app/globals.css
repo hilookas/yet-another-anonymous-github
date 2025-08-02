@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+/* Prism.js 语法高亮样式 */
+@import 'prismjs/themes/prism.css';
+@import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
+
+/* Markdown 样式 */
+@import 'github-markdown-css/github-markdown.css';
+
+/* 代码块样式 */
+.code-container {
+  position: relative;
+  margin: 1rem 0;
+}
+
+.code-container pre {
+  margin: 0;
+  padding: 1rem;
+  background-color: #f6f8fa;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.code-container code {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* 文件树样式 */
+.file-tree {
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+
+.file-tree-content {
+  padding: 1rem;
+}
+
+.tree-item {
+  margin: 0;
+}
+
+.tree-item-content {
+  transition: background-color 0.2s;
+}
+
+.tree-item-content:hover {
+  background-color: #f3f4f6;
+}
+
+.tree-children {
+  margin-left: 0;
+}
+
+/* 行号样式 */
+.line-numbers .line-numbers-rows {
+  border-right: 1px solid #ddd;
+  padding-right: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.line-numbers-rows > span:before {
+  content: counter(linenumber);
+  /* counter-increment: linenumber; */
+  color: #999;
+  font-size: 12px;
+  line-height: 1.45;
+  text-align: right;
+  display: inline-block;
+  width: 2.5em;
+}
+
+/* Prism.js 主题覆盖 */
+pre[class*="language-"] {
+  background: #f6f8fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  margin: 0;
+  padding: 16px;
+  overflow: auto;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+code[class*="language-"] {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+
+/* 确保代码高亮正常工作 */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #6a737d;
+}
+
+.token.punctuation {
+  color: #24292e;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #d73a49;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #032f62;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #d73a49;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #d73a49;
+}
+
+.token.function {
+  color: #6f42c1;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #e36209;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
