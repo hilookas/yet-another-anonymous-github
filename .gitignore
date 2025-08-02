@@ -135,3 +135,5 @@ coverage/
 # Misc
 *.tgz
 *.tar.gz 
+
+.open-next/
